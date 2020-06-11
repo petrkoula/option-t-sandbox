@@ -1,18 +1,26 @@
-import {getPerson, PersonError} from "../src/getPerson";
+import {createNone} from "option-t/lib/PlainOption";
+import {getPerson, ServiceError} from "../src/getPerson";
 
 describe('getPerson', () => {
-	test("returns ok", () => {
-		const person = getPerson("andy");
+	test("returns person", () => {
+		const result = getPerson("andy");
 
-		expect(person.ok).toBe(true)
-		expect(person.val).toEqual({name: 'andy'})
+		expect(result.ok).toBe(true)
+		expect(result.val.val.name).toEqual('andy')
 	})
 
-	test("returns not found", () => {
-		const person = getPerson("_");
+	test("returns none", () => {
+		const result = getPerson("_");
 
-		expect(person.ok).toBe(false)
-		expect(person.err).toBe(PersonError.NotFound)
+		expect(result.ok).toBe(true)
+		expect(result.val).toEqual(createNone())
+	})
+
+	test("returns bad query", () => {
+		const result = getPerson(null);
+
+		expect(result.ok).toBe(false)
+		expect(result.err).toBe(ServiceError.BadQuery)
 	})
 
 })

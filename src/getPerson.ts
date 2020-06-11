@@ -1,33 +1,38 @@
 // tslint:disable-next-line:no-submodule-imports
+import {isNotNullAndUndefined} from "option-t/lib/Maybe";
+import {createNone as none, createSome as some, Option} from "option-t/lib/PlainOption";
 import {createErr as err, createOk as ok, Result} from "option-t/lib/PlainResult";
 
 interface Person {
 	name: string,
 }
-type GetPersonResult = Result<Person, PersonError>;
-enum PersonError {
-	NotFound,
-	QueryEmpty,
+enum ServiceError {
+	BadQuery,
 }
+
 const people: Person[] = [
 	{name: "andy"},
 	{name: "johny"},
 ]
 
+type GetPersonResult = Result<Option<Person>, ServiceError>;
+
 const getPerson = (name: string): GetPersonResult => {
 	if(name == null){
-		return err(PersonError.QueryEmpty)
+		return err(ServiceError.BadQuery)
 	}
 
 	const person = people.find(p => p.name===name);
-	return !!person
-		? err(PersonError.NotFound)
-		: ok(person);
+	return !person
+		? ok(none())
+		: ok(some(person));
 }
 
-const getStatus = (string:name) => {
-	const person = getPerson(name)
+const getStatus = (name:string) => {
+	const result = getPerson(name)
+
+
 };
 
-export {getPerson, PersonError}
+export {getPerson, ServiceError}
 
