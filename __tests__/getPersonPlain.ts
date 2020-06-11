@@ -1,5 +1,5 @@
 import {createNone} from "option-t/lib/PlainOption";
-import {getPersonPlain, ServiceError} from "../src/getPerson";
+import {getPersonPlain, ServiceError} from "../src/getPersonPlain";
 
 describe('getPerson', () => {
 	test("returns person", () => {
