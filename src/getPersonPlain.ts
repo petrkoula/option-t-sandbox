@@ -1,7 +1,7 @@
 /* tslint:disable:no-submodule-imports interface-name */
 // tslint:disable-next-line:no-submodule-imports
 import {createNone as none, createSome as some, Option} from "option-t/esm/PlainOption";
-import {createErr as err, createOk as ok, Result, unwrap, unwrapErr} from "option-t/esm/PlainResult";
+import {createErr as err, createOk as ok, Result} from "option-t/esm/PlainResult";
 
 interface Person {
 	name: string,
