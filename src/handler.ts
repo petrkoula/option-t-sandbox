@@ -1,7 +1,7 @@
 /* tslint:disable:interface-name no-submodule-imports */
 import {unwrap} from "option-t/esm/PlainOption";
 import {unwrapErr} from "option-t/esm/PlainResult";
-import {getPersonPlain, ServiceError} from "../src/getPersonPlain";
+import {getPersonPlain, ServiceError} from "./getPersonPlain";
 
 interface HandlerResult {
 	status: number,

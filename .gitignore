@@ -81,3 +81,5 @@ typings/
 
 # Build files
 /lib/
+
+/.idea/workspace.xml
