@@ -10,9 +10,9 @@ interface HandlerResult {
 }
 
 export const handler = (name: string): HandlerResult => {
-	const res = getPersonPlain(name);
-	if (res.ok) {
-		const person = unwrap(res)
+	const result = getPersonPlain(name);
+	if (result.ok) {
+		const person = unwrap(result)
 		if (person.ok) {
 			return {status: 200, name: unwrap(person).name}
 		} else {
@@ -20,7 +20,7 @@ export const handler = (name: string): HandlerResult => {
 		}
 	}
 
-	const error = unwrapErr(res)
+	const error = unwrapErr(result)
 	switch (error) {
 		case ServiceError.BadQuery:
 			return {status: 400, err: error.toString()}
