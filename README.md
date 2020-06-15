@@ -10,3 +10,4 @@ Scenario solution must_have
 ## Libraries tested
 - option-t
 - fp-ts
+- neverthrow
