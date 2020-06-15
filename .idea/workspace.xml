@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf35264e-cd96-40fc-9ab6-7796e3cf62ae" name="Default Changelist" comment="added some readme">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="cf35264e-cd96-40fc-9ab6-7796e3cf62ae" name="Default Changelist" comment="added some more readme">
+      <change beforePath="$PROJECT_DIR$/__tests__/getPersonPlain.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/getPersonPlain.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,7 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="ts.external.directory.path" value="C:\dev\functional-results\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -134,7 +134,7 @@
       <workItem from="1591908087701" duration="1618000" />
       <workItem from="1591950434832" duration="916000" />
       <workItem from="1592250681589" duration="2063000" />
-      <workItem from="1592252950308" duration="3773000" />
+      <workItem from="1592252950308" duration="4027000" />
     </task>
     <task id="LOCAL-00001" summary="extracted person service">
       <created>1592251260169</created>
@@ -164,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592256456570</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added some more readme">
+      <created>1592256855186</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1592256855186</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,13 +193,14 @@
     <MESSAGE value="extracted person service" />
     <MESSAGE value="fp-ts example done" />
     <MESSAGE value="added some readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some readme" />
+    <MESSAGE value="added some more readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some more readme" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="97" key="DiffContextDialog" timestamp="1592255689459">
+    <state x="184" y="97" key="DiffContextDialog" timestamp="1592256962981">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="184" y="97" key="DiffContextDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1592255689459" />
+    <state x="184" y="97" key="DiffContextDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1592256962981" />
     <state width="1921" height="389" key="GridCell.Tab.0.bottom" timestamp="1591909633612">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -225,18 +233,18 @@
     </state>
     <state width="1920" height="438" key="GridCell.Tab.0.right.inPresentationMode/0.0.1920.1160@0.0.1920.1160" timestamp="1591906605904" />
     <state width="1921" height="389" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1591909633612" />
-    <state x="772" y="208" key="RollbackChangesDialog" timestamp="1592255972558">
+    <state x="772" y="208" key="RollbackChangesDialog" timestamp="1592256963836">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="772" y="208" key="RollbackChangesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1592255972558" />
-    <state x="559" y="164" width="1141" height="883" key="SettingsEditor" timestamp="1592251353390">
+    <state x="772" y="208" key="RollbackChangesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1592256963836" />
+    <state x="559" y="164" width="1141" height="883" key="SettingsEditor" timestamp="1592257006182">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="559" y="164" width="1141" height="883" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1592251353390" />
-    <state x="452" y="247" key="Vcs.Push.Dialog.v2" timestamp="1592256461261">
+    <state x="559" y="164" width="1141" height="883" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1592257006182" />
+    <state x="452" y="247" key="Vcs.Push.Dialog.v2" timestamp="1592256857133">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="452" y="247" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1592256461261" />
+    <state x="452" y="247" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1592256857133" />
     <state x="555" y="101" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1592254937671">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

@@ -1,4 +1,5 @@
 /* tslint:disable:no-submodule-imports interface-name */
+import {isNullOrUndefined, Maybe} from "option-t/esm/Maybe";
 // tslint:disable-next-line:no-submodule-imports
 import {createNone as none, createSome as some, Option, unwrap} from "option-t/esm/PlainOption";
 import {createErr as err, createOk as ok, Result, unwrapErr} from "option-t/esm/PlainResult";
@@ -24,8 +25,8 @@ export const handler = (name: string): HandlerResult => {
 	}
 }
 
-const getPersonPlain = (name: string): GetPersonResult => {
-	if (name == null) {
+const getPersonPlain = (name: Maybe<string>): GetPersonResult => {
+	if (isNullOrUndefined(name)) {
 		return err(ServiceError.BadQuery)
 	}
 
