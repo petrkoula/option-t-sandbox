@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cf35264e-cd96-40fc-9ab6-7796e3cf62ae" name="Default Changelist" comment="fp-ts example done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceError.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +135,7 @@
       <workItem from="1591908087701" duration="1618000" />
       <workItem from="1591950434832" duration="916000" />
       <workItem from="1592250681589" duration="2063000" />
-      <workItem from="1592252950308" duration="2417000" />
+      <workItem from="1592252950308" duration="3466000" />
     </task>
     <task id="LOCAL-00001" summary="extracted person service">
       <created>1592251260169</created>
@@ -152,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592255093656</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fp-ts example done">
+      <created>1592255392643</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592255392644</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +182,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="fp-ts example done" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="184" y="97" key="DiffContextDialog" timestamp="1592255689459">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="184" y="97" key="DiffContextDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1592255689459" />
     <state width="1921" height="389" key="GridCell.Tab.0.bottom" timestamp="1591909633612">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -208,6 +218,10 @@
     </state>
     <state width="1920" height="438" key="GridCell.Tab.0.right.inPresentationMode/0.0.1920.1160@0.0.1920.1160" timestamp="1591906605904" />
     <state width="1921" height="389" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1591909633612" />
+    <state x="772" y="208" key="RollbackChangesDialog" timestamp="1592255972558">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="772" y="208" key="RollbackChangesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1592255972558" />
     <state x="559" y="164" width="1141" height="883" key="SettingsEditor" timestamp="1592251353390">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -216,9 +230,17 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="555" y="101" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1592254937671" />
-    <state x="539" y="125" width="840" height="1034" key="search.everywhere.popup" timestamp="1592252084300">
+    <state x="598" y="216" width="723" height="728" key="find.popup" timestamp="1592255756381">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="539" y="125" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1592252084300" />
+    <state x="598" y="216" width="723" height="728" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1592255756381" />
+    <state x="733" y="309" key="refactoring.ChangeSignatureDialog" timestamp="1592255766205">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="733" y="309" key="refactoring.ChangeSignatureDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1592255766205" />
+    <state x="539" y="125" width="840" height="1034" key="search.everywhere.popup" timestamp="1592256032848">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="539" y="125" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1592256032848" />
   </component>
 </project>
