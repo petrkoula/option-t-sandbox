@@ -1,9 +1,7 @@
 /* tslint:disable:no-submodule-imports */
 import {Either, fold, left, right} from 'fp-ts/lib/Either'
-import {fromNullable, isNone, Option,toNullable} from 'fp-ts/lib/Option';
+import {fromNullable, isNone, Option, toNullable} from 'fp-ts/lib/Option';
 import {HandlerResult, ServiceError} from "../types";
-
-type GetPersonResult = Either<ServiceError, Person>;
 
 export const handler = (name: string): HandlerResult => {
 	const personResult = getPerson(fromNullable(name));
@@ -24,7 +22,7 @@ export const handler = (name: string): HandlerResult => {
 	return fold(replyError, replyOk)(personResult);
 }
 
-const getPerson = (name: Option<string>): GetPersonResult => {
+const getPerson = (name: Option<string>): Either<ServiceError, Person> => {
 	if (isNone(name)) {
 		left(ServiceError.BadQuery)
 	}

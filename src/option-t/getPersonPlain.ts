@@ -4,8 +4,6 @@ import {createNone as none, createSome as some, isNone, Option, unwrap} from "op
 import {createErr as err, createOk as ok, Result, unwrapErr} from "option-t/esm/PlainResult";
 import {HandlerResult, ServiceError} from "../types";
 
-type GetPersonResult = Result<Option<Person>, ServiceError>;
-
 export const handler = (name: string): HandlerResult => {
 	const result = getPersonPlain(some(name));
 	if (result.ok) {
@@ -24,7 +22,7 @@ export const handler = (name: string): HandlerResult => {
 	}
 }
 
-const getPersonPlain = (name: Option<string>): GetPersonResult => {
+const getPersonPlain = (name: Option<string>): Result<Option<Person>, ServiceError> => {
 	if (isNone(name)) {
 		return err(ServiceError.BadQuery)
 	}

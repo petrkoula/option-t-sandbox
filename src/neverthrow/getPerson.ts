@@ -3,8 +3,6 @@
 import {err, ok, Result} from 'neverthrow'
 import {HandlerResult, ServiceError} from "../types";
 
-type GetPersonResult = Result<Person, ServiceError>;
-
 export const handler = (name: string): HandlerResult => {
 	const personResult = getPerson(name);
 	const replyOk = (p: Person) => ({
@@ -24,7 +22,7 @@ export const handler = (name: string): HandlerResult => {
 	return personResult.match(replyOk, replyError)
 }
 
-const getPerson = (name: string): GetPersonResult => {
+const getPerson = (name: string): Result<Person, ServiceError> => {
 	if (name == null) {
 		err(ServiceError.BadQuery)
 	}
