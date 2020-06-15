@@ -1,14 +1,13 @@
 /* tslint:disable:no-submodule-imports interface-name */
-import {isNullOrUndefined, Maybe} from "option-t/esm/Maybe";
 // tslint:disable-next-line:no-submodule-imports
-import {createNone as none, createSome as some, Option, unwrap} from "option-t/esm/PlainOption";
+import {createNone as none, createSome as some, isNone, Option, unwrap} from "option-t/esm/PlainOption";
 import {createErr as err, createOk as ok, Result, unwrapErr} from "option-t/esm/PlainResult";
 import {HandlerResult, ServiceError} from "../types";
 
 type GetPersonResult = Result<Option<Person>, ServiceError>;
 
 export const handler = (name: string): HandlerResult => {
-	const result = getPersonPlain(name);
+	const result = getPersonPlain(some(name));
 	if (result.ok) {
 		const person = unwrap(result)
 		return person.ok
@@ -25,12 +24,12 @@ export const handler = (name: string): HandlerResult => {
 	}
 }
 
-const getPersonPlain = (name: Maybe<string>): GetPersonResult => {
-	if (isNullOrUndefined(name)) {
+const getPersonPlain = (name: Option<string>): GetPersonResult => {
+	if (isNone(name)) {
 		return err(ServiceError.BadQuery)
 	}
 
-	const person = findPerson(name)
+	const person = findPerson(unwrap(name))
 	return !person
 		? ok(none())
 		: ok(some(person));
