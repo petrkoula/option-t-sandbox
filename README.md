@@ -1,7 +1,6 @@
 # functional libraries exploration
-Trying to implement real world scenario using each library
-- service for finding person (finds one, finds none or fails)
-- handler mapping service result into HTTP response
+Trying to implement scenario with controller mapping service result to http response
+- service returns person (or none) or fails with an error
 
 ## Libraries tested
 - option-t
