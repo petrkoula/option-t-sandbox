@@ -1,25 +1,25 @@
 /* tslint:disable:no-submodule-imports interface-name */
 // tslint:disable-next-line:no-submodule-imports
-import {createNone as none, createSome as some, isNone, Option, unwrap} from "option-t/esm/PlainOption";
-import {createErr as err, createOk as ok, Result, unwrapErr} from "option-t/esm/PlainResult";
+import {isNone, Option, unwrap} from "option-t/esm/PlainOption";
+import {mapOrElse, Result} from "option-t/esm/PlainResult";
 import {HandlerResult, ServiceError} from "../types";
+import {err, none, ok, some} from "./types";
 
 export const handler = (name: string): HandlerResult => {
 	const result = getPersonPlain(some(name));
-	if (result.ok) {
-		const person = unwrap(result)
-		return person.ok
-			? {status: 200, name: unwrap(person).name}
-			: {status: 404, err: 'not found'};
-	}
 
-	const error = unwrapErr(result)
-	switch (error) {
-		case ServiceError.BadQuery:
-			return {status: 400, err: error.toString()}
-		case ServiceError.ServiceDown:
-			return {status: 503, err: error.toString()}
-	}
+	const mapError = (error: ServiceError): HandlerResult => {
+		const map = {
+			[ServiceError.BadQuery]: {status: 400, err: error.toString()},
+			[ServiceError.ServiceDown]: {status: 503, err: error.toString()}
+		}
+		return map[error]
+	};
+
+	return mapOrElse(result,
+		mapError,
+		person => ({status: 200, name: person.val.name})
+	)
 }
 
 const getPersonPlain = (name: Option<string>): Result<Option<Person>, ServiceError> => {
